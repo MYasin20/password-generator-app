@@ -1,0 +1,303 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+  max-width: 100%;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'JetBrainsMonoBold';
+  src: url(assets/fonts/static/JetBrainsMono-Bold.ttf)
+}
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url(assets/fonts/JetBrainsMono-VariableFont_wght.ttf);
+}
+body {
+  font-family: 'JetBrainsMono';
+  background-color: hsl(248, 15%, 11%);
+  color: white;
+  height: 500px;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 525px;
+  padding: 25px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: hsl(251, 9%, 53%);
+}
+
+.gen-pass-textfield {
+  font-size: 1.75rem;
+}
+
+.gray-bg {
+  background-color: hsl(247, 11%, 15%);
+  padding: 30px;
+}
+
+.pg-options {
+  margin-bottom: 25px;
+}
+
+.pg-display {
+  margin-bottom: 20px;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copied-success {
+  vertical-align: super;
+  padding-right: 8px;
+  color: hsl(127, 100%, 82%);
+  display: none;
+}
+
+.pg-display:hover {
+  cursor: pointer;
+}
+
+.pg-display:hover .copy-icon path {
+  fill: hsl(252, 11%, 91%);
+}
+
+.disabled, .disabled:hover {
+  color: gray;
+  user-select: none;
+}
+
+
+.password-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.15rem
+}
+
+.char-length-display {
+  color: hsl(127, 100%, 82%);
+}
+
+/* INPUT RANGE STYLING */
+
+input[type="range"] {
+  margin-block: 20px 10px;
+  width: 100%;
+  height: 10px;
+  background-color: hsl(248, 15%, 11%);
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  /* Hides the slider so that custom slider can be made */
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background: hsl(252, 11%, 91%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  height: 20px;
+  background: hsl(248, 15%, 11%);
+  border: 1px solid hsl(127, 100%, 82%);
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background: hsl(252, 11%, 91%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  background: hsl(252, 11%, 91%);
+  border-radius: 50%;
+  cursor: pointer;
+} */
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+  color: #13bba4;
+  margin-top: -1px;
+}
+
+
+/* INPUT CHECKBOX STYLING */
+.password-selection {
+  position: relative;
+  display: block;
+  margin-block: 25px;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: hsl(247, 11%, 15%);
+  border: 2px solid hsl(127, 100%, 82%);
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ .checkmark {
+  background-color: hsl(127, 100%, 82%);
+}
+
+input[type="checkbox"]:checked ~ .checkmark:after {
+  display: block;
+}
+
+.password-selection .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid hsl(247, 11%, 15%);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+
+.strength-result {
+  background: hsl(248, 15%, 11%);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  margin-block: 35px;
+}
+
+.strength-text {
+  text-transform: uppercase;
+  color: hsl(251, 9%, 53%);
+  font-family: 'JetBrainsMonoBold';
+}
+
+.strength-display {
+  font-family: 'JetBrainsMonoBold';
+  vertical-align: super;
+  font-size: 1.15rem;
+  padding-right: 3px;
+}
+
+.bar {
+  display: inline-block;
+  width: 8px;
+  height: 25px;
+  border: 2px solid white;
+  margin-inline: -1.5px;
+}
+
+.btn {
+  font-family: 'JetBrainsMonoBold';
+  font-size: 1.125rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 50px;
+  background: hsl(127, 100%, 82%);
+  color: hsl(247, 11%, 15%);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: hsl(247, 11%, 15%);
+  color: hsl(127, 100%, 82%);
+  border: 1px solid hsl(127, 100%, 82%);
+  /* transition: background 0.3s, color 0.3s; */
+}
+
+.btn:hover .arrow path {
+  fill: hsl(127, 100%, 82%);
+  /* transition: background 0.3s, color 0.3s; */
+}
+
+
+.d-inline {
+  display: inline-block;
+}
+
+
