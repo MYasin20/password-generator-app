@@ -1,7 +1,3 @@
-# Frontend Mentor - Password generator app solution
-
-This is a solution to the [Password generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -12,7 +8,6 @@ This is a solution to the [Password generator app challenge on Frontend Mentor](
   - [Built with](#built-with)
   - [Continued development](#continued-development)
 - [Author](#author)
-
 
 ## Overview
 
@@ -33,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/MYasin20/password-generator-app]
-- Live Site URL: [https://profound-starship-450710.netlify.app/]
+- Live Site URL: [https://myasin20.github.io/password-generator-app/]
 
 ## My process
 
@@ -53,5 +48,6 @@ Improving my problem solving skills.
 
 ## Author
 
-- Frontend Mentor - [@MYasin20](https://www.frontendmentor.io/profile/MYasin20)
+<!-- - Frontend Mentor - [@MYasin20](https://www.frontendmentor.io/profile/MYasin20) -->
+
 - Github - [@MYasin20](https://github.com/MYasin20)
